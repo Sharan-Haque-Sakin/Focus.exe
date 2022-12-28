@@ -1,0 +1,96 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+#navUl > li{
+    list-style: none;
+    padding-right: 6rem;
+}
+
+.nav > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav{
+margin-top: 2rem;
+    width: 100%;
+    padding-left: 5rem;
+}
+
+ul > a{
+    color:#252939;
+}
+
+ul > a:visited{
+    color:#252939;
+}
+
+
+.navLink:after {
+    display: block;
+    content: '';
+    border-bottom: 2px solid blue;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+    }
+    .navLink:hover:after {
+    transform: scaleX(1);
+}
+#menu{
+    display: none;
+}
+/* Hamburger */
+
+#menu{
+    width: 35px;
+    height: 30px;
+    
+    cursor:pointer;
+    z-index: 100;
+}
+
+.bar{
+    height: 5px;
+    width: 100%;
+    background-color: grey;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    margin-bottom: 3px;
+}
+/* 
+#bar1{
+    transform: translateY(-4px);
+}
+
+#bar2{
+    transform: translate(4px);
+} */
+
+@media (max-width:982px) {
+    #menu{
+        display: block;
+        margin-left: -1rem;
+}    
+.nav{
+    padding-left: 0; 
+    transition: all 0.7 ease-out;
+    opacity: 0;
+    height: 0;
+    margin-left: -49px;
+}
+
+.nav > ul{ 
+    flex-direction: column;
+}
+
+
+.show{ 
+    display: block;
+    opacity: 1;
+    height: 202px;
+}
+}
